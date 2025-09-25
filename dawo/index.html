@@ -1,24 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Digitaal Autonome Werkomgeving Overheid</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
+
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digitaal Autonome Werkomgeving Overheid</title>
+<style>
+    @font-face {
+        font-family: 'ROsanswebtextbold';
+        src: url('ROsanswebtextbold.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-family: 'ROsanswebtextbold', Arial, sans-serif;
+        width: 100%;
     }
-  </style>
+
+    section {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #section1 {
+        background-color: #d2deeb;
+        color: #0d4074;
+        padding-top: 120px;
+    }
+
+    #section2 {
+        background-color: white;
+        color: #0d4074;
+        padding-top: 100px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #logo {
+        width: 10vw;
+        max-width: 60px;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        margin-top: 90px;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin: 0 20px;
+    }
+
+    .video-container {
+        position: relative;
+        width: clamp(300px, 90%, 900px);
+        aspect-ratio: 16 / 9;
+        margin: 60px auto 20px auto;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: none;
+    }
+
+    .round-button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background-color: #7f98b1;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .round-button:hover {
+        background-color: #b6c4d3;
+    }
+
+    #arrowDown {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    #arrowUp {
+        position: absolute;
+        top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .video-container {
+            width: 100vw;
+            margin: 60px 0 20px 0;
+        }
+        .section-text {
+            margin: 0 10px;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 1024px) {
+        #arrowDown {
+            bottom: -10px;
+        }
+        #arrowUp {
+            top: -10px;
+        }
+    }
+</style>
 </head>
 <body>
-  <iframe src="https://digitaal-autonome-werkomgeving.codeberg.page/" allowfullscreen></iframe>
-</body>
-</html>
+
+<section id="section1">
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/800px-Logo_rijksoverheid.svg.png" alt="Logo">
+    <div class="section-title">Digitale Autonome Werkomgeving Overheid</div>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/_PDOGfX_Rfs" title="DAWO Video" allowfullscreen=""></iframe>
+    </div>
+    
+</section>
+
+
+
+
+
+</body></html>
